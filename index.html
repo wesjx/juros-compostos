@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Juros Compostos</title>
+    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="stylesheet" href="./reset.css"/>
+</head> 
+
+<body>
+    <main>
+        <div class="calculadora">
+        <input class="valores" id="capital" placeholder="Digite aqui seu capital."/>
+        <input class="valores" id="juros" placeholder="Digite aqui o juros."/>
+        <input class="valores" id="meses" placeholder="Digite aqui os meses."/>
+        <button class="btn41-43 btn-42" id="botao">Calcular</button>
+        <span>
+        </span>
+    </div>
+    </main>
+</body>
+
+
+<script>
+    
+    let cInput = document.querySelector('#capital');
+    let iInput = document.querySelector('#juros');
+    let nInput = document.querySelector('#meses');
+
+    
+    let span = document.querySelector('span');
+    let button = document.querySelector('#botao');
+    
+    function calcularJuros(){
+        let c = cInput.value;
+        
+        let i = iInput.value /100 + 1;
+        
+        let n = nInput.value;
+        
+        var potenciaMeses = Math.pow(i, n);
+
+       let r = (m = c*potenciaMeses);
+ 
+
+       span.textContent = (r.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
+    }
+
+    button.onclick = calcularJuros;
+
+
+</script>
