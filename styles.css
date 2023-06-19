@@ -1,5 +1,6 @@
 body {
     background: #27374D;
+    font-family: 'Barlow', sans-serif;
 }
 
 span {
@@ -9,10 +10,25 @@ span {
     text-align: center;
 }
 
+
+.title{
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem 3rem;;
+  color: #fff;
+}
+
+.text{
+  font-size: 1.2rem;
+  margin: 0 3rem;
+  color: #fff;
+}
+
 .calculadora{
     display: flex;
     margin: 2em;
-    flex-direction: column;
+    flex-direction: row;
+    width: 50%;
 }
 
 .valores{
@@ -65,4 +81,9 @@ span {
     top: 2px;
   }
 
-
+  @media screen and (max-width: 720px) {
+    .calculadora{
+      flex-direction: column;
+      width: 83%;
+  }
+  }
